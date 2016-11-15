@@ -1,0 +1,37 @@
+##接口##
+接口的定义:不关心类的细节 规定类中必须要遵守的规范
+关键字：interface
+[修饰符]interface 接口名字 [extends 父接口1 父接口2.....]
+接口的方法都是抽象方法
+可以用接口描述两个不同对象的共同特性
+
+使用匿名内部类的方式实现接口
+
+Icanuse u3=new Icanuse(){
+
+			@Override
+			public void canUse() {
+				// TODO Auto-generated method stub
+				System.out.println("I have no name,sorry");
+				
+			}
+			
+		};
+		u3.canUse();
+		
+		new Icanuse(){
+
+			@Override
+			public void canUse() {
+				// TODO Auto-generated method stub
+				System.out.println("I have no name,too");
+			}
+			
+		}.canUse();
+    
+##UML简介##
+统一建模语言：支持模型化和软件系统开发的图形化语言
+
+
+重点:继承&&重写&&多态&&抽象类
+
