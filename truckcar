@@ -1,0 +1,19 @@
+public class truckcar extends car {
+		
+		public String getname(){
+			return carname;
+		}
+		public double getrent(){
+			return rent;
+		}
+			
+		public truckcar(String name,double rent,int truckcap){
+				this.carname=name;
+				this.rent=rent;
+				this.truckcap=truckcap;
+		}
+		public void show(){
+			System.out.println(this.carname+'\t'+this.rent+'\t'+"载货"+this.truckcap+'\t');
+		}
+			
+	}
