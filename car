@@ -5,5 +5,5 @@ public class car {
 	public double truckcap;
 	public void show(){
 		System.out.println(this.carname+'\t'+this.rent+'\t'+"载人:"+this.passengercap+'\t'+"载货"+this.truckcap+'\t');
-	}
+	 }
 }
