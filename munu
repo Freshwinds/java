@@ -1,0 +1,31 @@
+package system;
+import java.util.Scanner;
+
+public class munu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Thank you for using dada car rental system");
+		System.out.println("do you want to rent a car?"+"1:yes 2:no");
+		Scanner in=new Scanner(System.in);
+		int choice=in.nextInt();
+		if(choice==0){
+			System.out.println("exit the system");
+		}
+		else{
+			car []cars={new passengercar("奥迪A4",500,4),new passengercar("马自达6",400,4),new pickupcar("皮卡雪6",450,2,4),new passengercar("金龙",800,20),new truckcar("松花江",400,4),new truckcar("依维珂",1000,4)};
+			System.out.println("你可租车的类型及其价目表");
+			System.out.println("序号 \t"+"汽车名称\t"+"租金\t"+"容量\t");
+			for(int i=0;i<cars.length;i++)
+			{
+			
+			}
+			
+			
+		}
+			
+		
+	}
+
+}
