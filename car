@@ -1,5 +1,3 @@
-
-
 public abstract class car {
 	public String carname;
 	public double rent;
