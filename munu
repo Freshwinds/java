@@ -19,9 +19,50 @@ public class munu {
 			System.out.println("序号 \t"+"汽车名称\t"+"租金\t"+"容量\t");
 			for(int i=0;i<cars.length;i++)
 			{
-			
+				int temp=i+1;
+				System.out.print((temp)+"\t");
+				cars[i].show();
 			}
+			System.out.println("请输入你要租汽车的数量");
+			int num = in.nextInt();
+			int []rentcar = new int[num];
+			for(int i=0;i<num;i++){
+				int temp=i+1;
+				System.out.println("请输入第"+temp+"辆车的序号");
+				rentcar[i]=in.nextInt();
+				rentcar[i]--;
+			}
+			System.out.println("请输入租车天数");
+			int day=in.nextInt();
+			System.out.println("您的账单:");
+			System.out.println("**可载人的车有:");
+			int pcapsum=0;
+			int price=0;
+			int []flag=new int[num];
+			for(int i=0;i<rentcar.length;i++){
+				if(cars[rentcar[i]] instanceof passengercar||cars[rentcar[i]] instanceof pickupcar){
+					System.out.print(cars[rentcar[i]].carname+"\t");
+					pcapsum+=cars[rentcar[i]].passengercap;
+					price+=cars[rentcar[i]].rent;
+					flag[rentcar[i]]=1;
+					
+				}
+			}
+			System.out.println("共载人:"+pcapsum+"人");
 			
+			System.out.println("**可载货的车有:");
+			int tcapsum=0;
+			for(int i=0;i<rentcar.length;i++){
+				if(cars[rentcar[i]] instanceof truckcar||cars[rentcar[i]] instanceof pickupcar){
+					System.out.print(cars[rentcar[i]].carname+'\t');
+					tcapsum+=cars[rentcar[i]].truckcap;
+					if(flag[rentcar[i]]!=1){
+						price+=cars[rentcar[i]].rent;
+					}
+				}
+			}
+			System.out.println("共载货:"+tcapsum+"吨");
+			System.out.println("**总租金为"+price*day);
 			
 		}
 			
